@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Condições</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro:
+    <input type="number" name="textvel" id="textvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    
+
+    </div>
+
+    <h1>Nacionalidade</h1>
+    Seu país:
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="nacionalidade()">
+    <div id="res2">
+
+    </div>
+
+
+    <script>
+        function calcular(){
+            var textvel = document.querySelector('input#textvel')
+            var saida = document.querySelector('div#res')
+            var velocidade = Number(textvel.value)
+            saida.innerHTML = `<p>Sua velocidade é <strong>${velocidade}Km/h</strong></p>`
+            if(velocidade > 60){
+                saida.innerHTML += "<p>Você excedeu o limite de velocidade. <strong>MULTADO!</strong></p>"
+            }
+            saida.innerHTML += "<p>Use cinto de segurança!</p>"
+        }
+
+        function nacionalidade(){
+            var pais = document.querySelector('input#pais')
+            var saida = document.querySelector('div#res2')
+            if(pais.value.toUpperCase() == "BRASIL"){
+                saida.innerHTML = `<p>Vocẽ é brasileiro.</p>`
+            }
+            else{
+                saida.innerHTML = `<p>Vocẽ é estrangeiro</p>`
+            }     
+        }
+
+    </script>
+    
+</body>
+</html>
