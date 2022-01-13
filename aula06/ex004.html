@@ -11,9 +11,10 @@
 
     <script>
         var nome = window.prompt("Qual o seu nome?")
-        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras<br>`)
-        document.write(`Olá, ${nome.toUpperCase()}!`)
-
+        document.write(`Olá, <strong>${nome}!</strong> Seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em caixa alta é, ${nome.toUpperCase()}!<br>`)
+        var salario = 2643.3
+        document.write( `O salário é ${ salario.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})  }`)
 
     </script>
     

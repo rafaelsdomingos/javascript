@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DOM - Aula 2</title>
+    <style>
+        #area{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+            box-shadow: 1px 3px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerHTML = 'Clicou!'
+            a.style.boxShadow = '0px 0px 0px black'
+        }
+
+        function entrar(){
+            a.innerHTML = 'Entrou!'
+            a.style.boxShadow = '1px 3px 1px black'
+        }
+
+        function sair(){
+            a.innerHTML = 'Saiu!'
+            a.style.boxShadow = '1px 3px 1px black'
+        }
+    </script>
+    
+</body>
+</html>
